@@ -1,0 +1,25 @@
+<resources>
+
+    <dimen name="corner_radius_small">2dp</dimen>
+    <dimen name="corner_radius_regular">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">10dp</dimen>
+    <dimen name="corner_radius_xlarge">25dp</dimen>
+
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_regular">10dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_extra_large">25dp</dimen>
+
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_extra_large">20sp</dimen>
+
+    <dimen name="elevation_small">3dp</dimen>
+    <dimen name="elevation_regular">5dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
