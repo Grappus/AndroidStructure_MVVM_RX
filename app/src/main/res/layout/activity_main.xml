@@ -8,14 +8,4 @@
         android:id="@+id/fl_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <com.grappus.android.basemvvm.views.customviews.CustomTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha=".5"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_extra_large"
-        app:customFont="@string/font_medium" />
 </FrameLayout>

@@ -1,6 +1,10 @@
 package com.grappus.android.basemvvm.views.fragments.onboarding
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.grappus.android.basemvvm.R
 import com.grappus.android.basemvvm.views.fragments.BaseFragment
 
 class LoginFragment : BaseFragment() {
@@ -13,6 +17,11 @@ class LoginFragment : BaseFragment() {
             fragment.arguments = args
             return fragment
         }
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun extractData() {
