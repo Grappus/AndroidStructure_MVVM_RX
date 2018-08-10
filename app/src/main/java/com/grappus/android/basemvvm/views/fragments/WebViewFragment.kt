@@ -1,4 +1,4 @@
-package bajaj.capital.android.fragments
+package com.grappus.android.basemvvm.views.fragments
 
 import android.graphics.Bitmap
 import android.net.http.SslError
@@ -13,7 +13,6 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.grappus.android.basemvvm.R
 import com.grappus.android.basemvvm.utils.Constants
-import com.grappus.android.basemvvm.views.fragments.BaseFragment
 import kotlinx.android.synthetic.main.fragment_web_view.*
 
 

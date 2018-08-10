@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 
-import bajaj.capital.android.activities.BaseActivity
+import com.grappus.android.basemvvm.views.activities.BaseActivity
 import com.grappus.android.basemvvm.views.activities.BaseFragmentActivity
 import com.grappus.android.basemvvm.listeners.FragmentSelectionListener
 import io.reactivex.disposables.CompositeDisposable

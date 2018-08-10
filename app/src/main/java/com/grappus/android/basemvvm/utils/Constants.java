@@ -8,7 +8,7 @@ public class Constants {
 
     public interface Global {
 
-        String FILE_DIR_ROOT = "BajajCapital";
+        String FILE_DIR_ROOT = "Grappus";
         String FILE_DIR_SUB_DOC = FILE_DIR_ROOT + "/Documents";
         String FILE_DIR_SUB_MEDIA = FILE_DIR_ROOT + "/Media";
 

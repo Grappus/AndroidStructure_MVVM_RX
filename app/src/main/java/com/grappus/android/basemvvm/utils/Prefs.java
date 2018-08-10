@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 public class Prefs {
 
-    public static final String PREF_NAME = "Bajaj";
+    public static final String PREF_NAME = "Grappus";
 
     private static Context context;
     private static SharedPreferences prefs;

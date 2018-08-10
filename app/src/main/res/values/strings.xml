@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">BaseMVVMProject</string>
 
-    //Room database name
+    <!--Local Database Name-->
     <string name="db_name">Grappus-DB</string>
 
     <!-- Custom Fonts-->
-    <string name="font_regular">"Rubik-Regular.ttf"</string>
-    <string name="font_medium">"Rubik-Medium.ttf"</string>
-    <string name="font_bold">"Rubik-Bold.ttf"</string>
+    <string name="font_light">"Roboto-Light.ttf"</string>
+    <string name="font_regular">"Roboto-Regular.ttf"</string>
+    <string name="font_medium">"Roboto-Medium.ttf"</string>
+    <string name="font_bold">"Roboto-Bold.ttf"</string>
 
 
     <!-- Alert Messages -->
@@ -23,4 +24,5 @@
     <!-- Validation Rules -->
     <string name="rule_password">Password should be at least 8 character long with 1 uppercase, 1 lowercase, 1 special and 1 numeric character</string>
     <string name="rule_phone">Phone number should be 10 digit long without country code</string>
+
 </resources>

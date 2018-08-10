@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
-import bajaj.capital.android.activities.BaseActivity
 import com.grappus.android.basemvvm.R
 import com.grappus.android.basemvvm.listeners.FragmentSelectionListener
 import com.grappus.android.basemvvm.utils.Constants

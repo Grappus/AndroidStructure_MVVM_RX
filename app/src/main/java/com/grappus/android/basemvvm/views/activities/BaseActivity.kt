@@ -1,10 +1,9 @@
-package bajaj.capital.android.activities
+package com.grappus.android.basemvvm.views.activities
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import com.grappus.android.basemvvm.utils.Utils
 import io.reactivex.disposables.CompositeDisposable
 
 
