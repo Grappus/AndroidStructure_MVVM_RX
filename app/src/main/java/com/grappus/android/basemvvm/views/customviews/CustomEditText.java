@@ -3,7 +3,7 @@ package com.grappus.android.basemvvm.views.customviews;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.util.AttributeSet;
 
 import com.grappus.android.basemvvm.R;

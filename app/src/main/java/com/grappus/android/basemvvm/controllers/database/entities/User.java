@@ -1,8 +1,8 @@
 package com.grappus.android.basemvvm.controllers.database.entities;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.annotation.NonNull;
 
 /**
  * Created by chandrapratapsingh on 6/8/18.

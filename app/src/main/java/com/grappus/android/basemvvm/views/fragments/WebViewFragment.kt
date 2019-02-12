@@ -3,8 +3,8 @@ package com.grappus.android.basemvvm.views.fragments
 import android.graphics.Bitmap
 import android.net.http.SslError
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AlertDialog
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,7 +42,7 @@ class WebViewFragment : BaseFragment() {
 
     override fun extractData() {
         if (arguments != null)
-            webUrl = arguments.getString(Constants.RequestArgs.ARG_EXTRA_1)
+            webUrl = arguments!!.getString(Constants.RequestArgs.ARG_EXTRA_1)
     }
 
     override fun initComponents() {
@@ -95,7 +95,8 @@ class WebViewFragment : BaseFragment() {
 
 
     private fun showSSLErrorAlert(handler: SslErrorHandler?) {
-        AlertDialog.Builder(activity)
+        activity?.let {
+            AlertDialog.Builder(it)
                 .setTitle("Security Alert!")
                 .setMessage("We found some SSL certification error while opening this web page, "
                         + "proceeding further may be a security concern!")
@@ -107,5 +108,6 @@ class WebViewFragment : BaseFragment() {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setCancelable(false)
                 .show()
+        }
     }
 }
