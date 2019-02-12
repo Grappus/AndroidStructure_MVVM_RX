@@ -117,4 +117,12 @@ dependencies {
 
     //Loader
     implementation "com.wang.avi:library:$loaderVersion"
+
+    //Google
+    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-places:$playServicesVersion"
+
+    //constraint layout
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
