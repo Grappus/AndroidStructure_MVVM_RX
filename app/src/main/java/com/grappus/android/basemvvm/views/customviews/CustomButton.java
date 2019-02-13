@@ -3,7 +3,7 @@ package com.grappus.android.basemvvm.views.customviews;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.v7.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatButton;
 import android.util.AttributeSet;
 
 import com.grappus.android.basemvvm.R;

@@ -5,14 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion androidVersion
+    compileSdkVersion ANDROID_VERSION
     defaultConfig {
         applicationId "com.grappus.android.basemvvm"
-        minSdkVersion 16
-        targetSdkVersion androidVersion
+        minSdkVersion 19
+        targetSdkVersion ANDROID_VERSION
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled false
 
         javaCompileOptions {
@@ -63,7 +63,7 @@ android.variantFilter { variant ->
     if ((variant.buildType.name == 'release' && (variant.getFlavors().get(0).name == 'development'
             || variant.getFlavors().get(0).name == 'staging')) || (variant.buildType.name == 'debug' &&
             variant.getFlavors().get(0).name == 'production')) {
-        variant.setIgnore(true);
+        variant.setIgnore(true)
     }
 }
 
@@ -75,54 +75,58 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
     //Test
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.android.support:support-annotations:27.1.1'
+    testImplementation "junit:junit:$J_UNIT_VERSION"
+    androidTestImplementation "androidx.test:runner:$TEST_RUNNER_VERSION"
+    androidTestImplementation "androidx.test.espresso:$EXPRESSO_LIB_VERSION"
+
+    implementation "androidx.annotation:annotation:$ANNOTATION_LIB_VERSION"
 
     //Native/Support Libraries
-    implementation "com.android.support:support-v4:$supportLibVersion"
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
-    implementation "com.android.support:design:$supportLibVersion"
-    implementation "com.android.support:cardview-v7:$supportLibVersion"
+    implementation "androidx.legacy:legacy-support-v4:$SUPPORT_LIB_VERSION"
+
+    implementation "androidx.appcompat:appcompat:$APP_COMPAT_VERSION"
+    implementation "com.google.android.material:material:$SUPPORT_LIB_VERSION"
+    implementation "androidx.cardview:cardview:$SUPPORT_LIB_VERSION"
+
 
     //MultiDex Support
-    implementation "com.android.support:multidex:$multidexSupportVersion"
+    implementation "androidx.multidex:multidex:$MULTIDEX_SUPPORT_VERSION"
 
     //Gson
-    implementation "com.google.code.gson:gson:$gsonLibVersion"
+    implementation "com.google.code.gson:gson:$GSON_LIB_VERSION"
 
     //Retrofit
-    implementation "com.squareup.retrofit2:retrofit:$retrofitLibVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitLibVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorLibVersion"
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_LIB_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_LIB_VERSION"
+    implementation "com.squareup.okhttp3:logging-interceptor:$LOGGING_INTERCEPTOR_LIB_VERSION"
 
     //RxJava
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaLibVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaAndroidLibVersion"
-    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rxJavaAdapterLibVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$RX_JAVA_LIB_VERSION"
+    implementation "io.reactivex.rxjava2:rxandroid:$RX_JAVA_ANDROID_LIB_VERSION"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$RX_JAVA_ADAPTER_LIB_VERSION"
 
     //Architecture Components: ViewModel, Room
-    implementation "android.arch.lifecycle:extensions:$lifecycleComponentVersion"
-    annotationProcessor "android.arch.lifecycle:compiler:$lifecycleComponentVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
-    implementation "android.arch.persistence.room:runtime:$roomVersion"
-    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_COMPONENT_VERSION"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$LIFECYCLE_COMPONENT_VERSION"
+    annotationProcessor "androidx.room:room-compiler:$LIFECYCLE_COMPONENT_VERSION"
+
+    implementation "androidx.room:room-runtime:$ROOM_VERSION"
+    implementation "androidx.room:room-rxjava2:$ROOM_VERSION"
 
     //Glide
-    implementation "com.github.bumptech.glide:glide:$glideLibVersion"
+    implementation "com.github.bumptech.glide:glide:$GLIDE_LIB_VERSION"
 
     //File Picker
-    implementation "com.kbeanie:multipicker:$multipickerLibVersion"
+    implementation "com.kbeanie:multipicker:$MULTI_PICKER_LIB_VERSION"
 
     //Loader
-    implementation "com.wang.avi:library:$loaderVersion"
+    implementation "com.wang.avi:library:$LOADER_VERSION"
 
     //Google
-    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
-    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
-    implementation "com.google.android.gms:play-services-places:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-maps:$PLAY_SERVICES_VERSION"
+    implementation "com.google.android.gms:play-services-location:$PLAY_SERVICES_VERSION"
+    implementation "com.google.android.gms:play-services-places:$PLAY_SERVICES_VERSION"
 
     //constraint layout
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "com.android.support.constraint:constraint-layout:$CONSTRAINT_LAYOUT_VERSION"
 }

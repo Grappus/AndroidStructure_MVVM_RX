@@ -2,7 +2,7 @@ package com.grappus.android.basemvvm.views.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.View
 
 import com.grappus.android.basemvvm.views.activities.BaseActivity
@@ -15,7 +15,7 @@ import io.reactivex.disposables.CompositeDisposable
  * Created by chandrapratapsingh on 5/31/18.
  */
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment : androidx.fragment.app.Fragment() {
 
     private val TAG = BaseFragment::class.java.simpleName
 
@@ -34,7 +34,7 @@ abstract class BaseFragment : Fragment() {
             listener = context
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         compositeDisposable = CompositeDisposable()
@@ -67,7 +67,7 @@ abstract class BaseFragment : Fragment() {
     }
 
     fun finishActivity() {
-        if (isAdded && activity != null) activity.finish()
+        if (isAdded && activity != null) activity!!.finish()
     }
 
     fun navigateBack() {

@@ -1,6 +1,6 @@
 package com.grappus.android.basemvvm.repositories;
 
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.MutableLiveData;
 import android.content.Context;
 
 import com.grappus.android.basemvvm.controllers.network.APIController;

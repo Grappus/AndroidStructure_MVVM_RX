@@ -1,9 +1,9 @@
 package com.grappus.android.basemvvm.views.activities
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.grappus.android.basemvvm.R
 import com.grappus.android.basemvvm.listeners.FragmentSelectionListener
 import com.grappus.android.basemvvm.utils.Constants
@@ -18,8 +18,8 @@ abstract class BaseFragmentActivity : BaseActivity(), FragmentSelectionListener,
 
     private val TAG = BaseFragmentActivity::class.java.simpleName
 
-    var fragmentManager: FragmentManager? = null
-    var fragmentTransaction: FragmentTransaction? = null
+    var fragmentManager: androidx.fragment.app.FragmentManager? = null
+    var fragmentTransaction: androidx.fragment.app.FragmentTransaction? = null
 
     var fragReqCode: Int = 0
     var fragReqData: Bundle? = null
@@ -58,14 +58,14 @@ abstract class BaseFragmentActivity : BaseActivity(), FragmentSelectionListener,
         openFragment(reqCode, data, fragmentTransaction)
     }
 
-    fun getFragment(reqCode: Int, data: Bundle?): Fragment? {
+    fun getFragment(reqCode: Int, data: Bundle?): androidx.fragment.app.Fragment? {
         when (reqCode) {
             Constants.RequestFragment.FRAG_LOGIN -> return LoginFragment.newInstance(data)
         }
         return null
     }
 
-    fun openFragment(reqCode: Int, data: Bundle?, fragmentTransaction: FragmentTransaction?) {
+    fun openFragment(reqCode: Int, data: Bundle?, fragmentTransaction: androidx.fragment.app.FragmentTransaction?) {
         if (fragmentTransaction == null) return
 
         val fragment = getFragment(reqCode, data)
@@ -79,7 +79,7 @@ abstract class BaseFragmentActivity : BaseActivity(), FragmentSelectionListener,
 
     fun clearFragmentBackStack(reqCode: Int, data: Bundle) {
         if (fragmentManager != null) {
-            fragmentManager!!.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            fragmentManager!!.popBackStackImmediate(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
         onFragmentSelected(reqCode, data)
     }

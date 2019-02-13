@@ -2,8 +2,8 @@
 
 buildscript {
     ext {
-        gradleVersion = '3.1.3'
-        kotlinVersion = '1.2.51'
+        gradleVersion = '3.3.1'
+        kotlinVersion = '1.3.21'
         googleServicesPluginVersion = '4.2.0'
     }
 
@@ -31,23 +31,30 @@ allprojects {
     project.ext {
         javaCompatibilityVersion = 1.8
 
-        androidVersion = 26
-        supportLibVersion = "26.1.0"
-        multidexSupportVersion = "1.0.3"
+        ANNOTATION_LIB_VERSION="1.1.0-alpha01"
+        EXPRESSO_LIB_VERSION="espresso-core:3.1.2-alpha01"
+        TEST_RUNNER_VERSION="1.1.2-alpha01"
+        J_UNIT_VERSION="4.12"
 
-        lifecycleComponentVersion = "1.1.0"
-        roomVersion = "1.0.0"
-        retrofitLibVersion = "2.1.0"
-        loggingInterceptorLibVersion = "3.3.1"
-        rxJavaLibVersion = "2.1.1"
-        rxJavaAndroidLibVersion = "2.0.1"
-        rxJavaAdapterLibVersion = "1.0.0"
+        ANDROID_VERSION = 28
+        SUPPORT_LIB_VERSION = "1.0.0"
+        APP_COMPAT_VERSION="1.0.2"
+        CONSTRAINT_LAYOUT_VERSION="1.1.3"
+        MULTIDEX_SUPPORT_VERSION = "2.0.1"
 
-        glideLibVersion = "3.7.0"
-        gsonLibVersion = "2.6.2"
-        multipickerLibVersion = "1.1.31@aar"
-        loaderVersion = "2.1.3"
-        playServicesVersion = "16.0.0"
+        LIFECYCLE_COMPONENT_VERSION = "2.1.0-alpha02"
+        ROOM_VERSION = "2.1.0-alpha04"
+        RETROFIT_LIB_VERSION = "2.1.0"
+        LOGGING_INTERCEPTOR_LIB_VERSION = "3.3.1"
+        RX_JAVA_LIB_VERSION = "2.1.1"
+        RX_JAVA_ANDROID_LIB_VERSION = "2.0.1"
+        RX_JAVA_ADAPTER_LIB_VERSION = "1.0.0"
+
+        GLIDE_LIB_VERSION = "3.7.0"
+        GSON_LIB_VERSION = "2.6.2"
+        MULTI_PICKER_LIB_VERSION = "1.1.31@aar"
+        LOADER_VERSION = "2.1.3"
+        PLAY_SERVICES_VERSION = "16.0.0"
     }
 }
 
