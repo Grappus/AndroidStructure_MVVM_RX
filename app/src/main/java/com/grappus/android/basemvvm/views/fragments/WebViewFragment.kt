@@ -47,7 +47,7 @@ class WebViewFragment : BaseFragment() {
 
     override fun initComponents() {
 
-        if (com.grappus.android.basemvvm.utils.Utils.isEmpty(webUrl)) {
+        if (com.grappus.android.basemvvm.utils.TextUtils.isEmpty(webUrl)) {
             showToast(getString(R.string.error_general))
             navigateBack()
             return

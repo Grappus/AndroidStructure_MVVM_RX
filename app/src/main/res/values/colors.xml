@@ -3,4 +3,52 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!--Grey Variants-->
+    <color name="colorYellowishGrey">#838372</color>
+    <color name="colorLightGrey">#d4d2c9</color>
+    <color name="colorGreyLight">#ebebe2</color>
+    <color name="colorGreyVeryLight">#F3F3EC</color>
+    <color name="colorParentBackground">#F7F7F2</color>
+    <color name="colorGreyMediumLight">#bebeb9</color>
+    <color name="colorGreyMedium">#a4a498</color>
+    <color name="colorGreyMediumDark">#979797</color>
+    <color name="colorGrey">#767670</color>
+    <color name="colorGreyDark">#52524c</color>
+    <color name="colorGreyVariantTwo">#F3F3F3</color>
+    <color name="colorGreyDisabledButton">#d4d7dc</color>
+    <color name="colorDefautLayoutBg">#FFFAFAFA</color>
+
+
+    <!--Black Variants-->
+    <color name="colorBlack">#000</color>
+    <color name="colorBlackVariantOne">#333333</color>
+    <color name="colorBlackOpacity95">#95000000</color>
+    <color name="colorBlackOpacity40">#66333333</color>
+    <color name="colorBlackOpacity5">#0D333333</color>
+    <color name="colorBlackOpacity10">#1A333333</color>
+    <color name="colorBlackOpacity20">#32000000</color>
+
+
+    <!--White Variants-->
+    <color name="colorWhite">#fff</color>
+    <color name="colorWhiteOpacity50">#80ffffff</color>
+    <color name="colorWhiteOpacity70">#B3ffffff</color>
+    <color name="colorWhiteOpacity90">#E6ffffff</color>
+    <color name="colorOffWhite">#d4d2c9</color>
+
+
+    <!--Red Variants-->
+    <color name="colorRed">#FF4A4A</color>
+    <color name="colorRedDark">#b4433c</color>
+
+
+    <!--Green Variants-->
+    <color name="colorGreenTemp">#3bd03b</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <!--Yellow Variants-->
+    <color name="colorYellowLight">#33ffe200</color>
 </resources>
