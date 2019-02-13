@@ -14,15 +14,25 @@
     <!-- Alert Messages -->
     <string name="alert_loading">Loading...</string>
     <string name="alert_wait">Wait...</string>
+    <string name="btn_toolbar_cancel">Cancel</string>
+    <string name="alert_text">Alert</string>
+    <string name="btn_okay">Okay</string>
 
 
     <!-- Error Messages -->
     <string name="error_general">Oops, Something went wrong!</string>
     <string name="error_internet">Check your internet connection!</string>
+    <string name="error_play_services">Google Play Services are required to use notification and other important services of the app, please update!</string>
+    <string name="profile_some_data">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+
 
 
     <!-- Validation Rules -->
     <string name="rule_password">Password should be at least 8 character long with 1 uppercase, 1 lowercase, 1 special and 1 numeric character</string>
     <string name="rule_phone">Phone number should be 10 digit long without country code</string>
+
+    <string name="text_morning">Morning</string>
+    <string name="text_noon">Afternoon</string>
+    <string name="text_evening">Evening</string>
 
 </resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_alert_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:paddingEnd="@dimen/margin_extra_large"
+    android:paddingStart="@dimen/margin_extra_large">
+
+    <LinearLayout
+        android:id="@+id/ll_alert_box_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_alert_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_background_white_regular_rounded_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_extra_xlarge">
+
+            <com.grappus.android.basemvvm.views.customviews.CustomTextView
+                android:id="@+id/tv_alert_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_text"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_sub_heading"
+                app:customFont="@string/font_bold" />
+
+            <com.grappus.android.basemvvm.views.customviews.CustomTextView
+                android:id="@+id/tv_alert_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textAlignment="center"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/text_regular"
+                app:customFont="@string/font_regular"
+                tools:text="@string/profile_some_data" />
+
+            <LinearLayout
+                android:id="@+id/ll_enter_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.grappus.android.basemvvm.views.customviews.CustomEditText
+                    android:id="@+id/et_enter_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey"
+                    android:textSize="@dimen/text_medium"
+                    app:customFont="@string/font_medium"
+                    tools:hint="Enter email address" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/colorGreyLight" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            app:layout_constraintTop_toBottomOf="@id/ll_alert_box">
+
+            <com.grappus.android.basemvvm.views.customviews.CustomButton
+                android:id="@+id/btn_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_background_white_border_green_regular_rounded_corner"
+                android:text="@string/btn_okay"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_medium"
+                app:customFont="@string/font_bold"
+                app:layout_constraintEnd_toStartOf="@id/btn_no"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <com.grappus.android.basemvvm.views.customviews.CustomButton
+                android:id="@+id/btn_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_regular"
+                android:layout_marginStart="@dimen/margin_regular"
+                android:background="@drawable/drawable_background_white_border_green_regular_rounded_corner"
+                android:text="@string/btn_toolbar_cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:customFont="@string/font_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_yes"
+                tools:visibility="visible" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+<!--include src-->
+    <ImageView
+        android:id="@+id/iv_alert_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/alert_text"
+        app:layout_constraintBottom_toTopOf="@id/ll_alert_box_wrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_alert_box_wrapper" />
+
+</android.support.constraint.ConstraintLayout>

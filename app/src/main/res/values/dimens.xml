@@ -6,11 +6,17 @@
     <dimen name="corner_radius_large">10dp</dimen>
     <dimen name="corner_radius_xlarge">25dp</dimen>
 
+    <dimen name="margin_extra_small">3dp</dimen>
     <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_semi_regular">8dp</dimen>
     <dimen name="margin_regular">10dp</dimen>
+    <dimen name="margin_semi_medium">12dp</dimen>
+    <dimen name="margin_regular_medium">13dp</dimen>
     <dimen name="margin_medium">15dp</dimen>
     <dimen name="margin_large">20dp</dimen>
     <dimen name="margin_extra_large">25dp</dimen>
+    <dimen name="margin_extra_xlarge">30dp</dimen>
+    <dimen name="margin_super_extra_large">40dp</dimen>
 
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_regular">14sp</dimen>
@@ -20,6 +26,12 @@
 
     <dimen name="elevation_small">3dp</dimen>
     <dimen name="elevation_regular">5dp</dimen>
+
+    <dimen name="text_extra_large_heading">35sp</dimen>
+    <dimen name="text_large_heading">29sp</dimen>
+    <dimen name="text_heading">26sp</dimen>
+    <dimen name="text_sub_heading">24sp</dimen>
+    <dimen name="text_small_heading">22sp</dimen>
 
     <dimen name="fab_margin">16dp</dimen>
 </resources>

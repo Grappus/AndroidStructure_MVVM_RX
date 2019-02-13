@@ -4,6 +4,7 @@ buildscript {
     ext {
         gradleVersion = '3.3.1'
         kotlinVersion = '1.3.21'
+        googleServicesPluginVersion = '4.2.0'
     }
 
     repositories {
@@ -14,6 +15,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradleVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.google.gms:google-services:$googleServicesPluginVersion"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -29,7 +31,6 @@ allprojects {
     project.ext {
         javaCompatibilityVersion = 1.8
 
-        //TESTING LIBS
         ANNOTATION_LIB_VERSION="1.1.0-alpha01"
         EXPRESSO_LIB_VERSION="espresso-core:3.1.2-alpha01"
         TEST_RUNNER_VERSION="1.1.2-alpha01"
@@ -38,6 +39,7 @@ allprojects {
         ANDROID_VERSION = 28
         SUPPORT_LIB_VERSION = "1.0.0"
         APP_COMPAT_VERSION="1.0.2"
+        CONSTRAINT_LAYOUT_VERSION="1.1.3"
         MULTIDEX_SUPPORT_VERSION = "2.0.1"
 
         LIFECYCLE_COMPONENT_VERSION = "2.1.0-alpha02"
@@ -52,8 +54,7 @@ allprojects {
         GSON_LIB_VERSION = "2.6.2"
         MULTI_PICKER_LIB_VERSION = "1.1.31@aar"
         LOADER_VERSION = "2.1.3"
-
-
+        PLAY_SERVICES_VERSION = "16.0.0"
     }
 }
 
