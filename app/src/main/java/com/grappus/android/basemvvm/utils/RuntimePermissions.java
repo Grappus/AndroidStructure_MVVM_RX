@@ -3,7 +3,6 @@ package com.grappus.android.basemvvm.utils;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.support.v4.content.ContextCompat;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -11,6 +10,8 @@ import com.grappus.android.basemvvm.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.core.content.ContextCompat;
 
 public class RuntimePermissions implements Constants.RuntimePermissions {
 

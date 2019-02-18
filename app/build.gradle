@@ -128,5 +128,5 @@ dependencies {
     implementation "com.google.android.gms:play-services-places:$PLAY_SERVICES_VERSION"
 
     //constraint layout
-    implementation "com.android.support.constraint:constraint-layout:$CONSTRAINT_LAYOUT_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
 }
