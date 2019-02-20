@@ -129,4 +129,10 @@ dependencies {
 
     //constraint layout
     implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-core:$FIREBASE_CORE"
+    implementation "com.google.firebase:firebase-messaging:$FIREBASE_MESSAGING"
 }
+//Change google-services file according to respective firebase project.
+apply plugin: 'com.google.gms.google-services'

@@ -187,4 +187,8 @@ public class Constants {
 
         int REQUEST_CODE_PLAY_SERVICES_AVAILABILITY_CHECK = 10;
     }
+
+    public interface Broadcasts {
+        String NOTIFICATION_BROADCAST = "notification_broadcast";
+    }
 }

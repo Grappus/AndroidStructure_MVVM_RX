@@ -75,28 +75,6 @@ public class TextUtils implements Constants.Global {
         return str;
     }
 
-
-    public static String getAgeAndGender(String dob, String gender) {
-        ArrayList<String> list = new ArrayList<>();
-
-        if (TextUtils.isNotEmpty(dob))
-            list.add("Age " + getAge(dob));
-
-        if (TextUtils.isNotEmpty(gender))
-            switch (gender) {
-                case Constants.Gender.M: {
-                    list.add(MALE);
-                    break;
-                }
-                case Constants.Gender.F: {
-                    list.add(FEMALE);
-                    break;
-                }
-            }
-        return getCombinedStringList(list, Constants.Global.DOT, true);
-    }
-
-
     public static void setTextView(TextView textView, String value) {
         if (textView == null) return;
         if (isEmpty(value)) textView.setVisibility(View.GONE);
@@ -104,26 +82,6 @@ public class TextUtils implements Constants.Global {
             if (textView.getVisibility() != View.VISIBLE) textView.setVisibility(View.VISIBLE);
             textView.setText(value);
         }
-    }
-
-    public static int getAge(String sDOB) {
-        if (TextUtils.isNotEmpty(sDOB)) {
-            SimpleDateFormat sdf = new SimpleDateFormat(DATE_DOB);
-            try {
-                Calendar today = Calendar.getInstance();
-                Calendar dob = Calendar.getInstance();
-                dob.setTime(sdf.parse(sDOB));
-
-                int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
-                if (today.get(Calendar.DAY_OF_MONTH) < dob.get(Calendar.DAY_OF_MONTH)) {
-                    age--;
-                }
-                return age;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return 0;
     }
 }
 
