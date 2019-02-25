@@ -18,6 +18,7 @@ import com.grappus.android.basemvvm.R;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -25,6 +26,10 @@ import java.util.Locale;
 import java.util.TimeZone;
 import java.util.UUID;
 import java.util.regex.Pattern;
+
+import static com.grappus.android.basemvvm.utils.Constants.Gender.FEMALE;
+import static com.grappus.android.basemvvm.utils.Constants.Gender.MALE;
+import static com.grappus.android.basemvvm.utils.TextUtils.getCombinedStringList;
 
 
 /**
@@ -196,5 +201,47 @@ public class Utils implements Constants.Global, Constants.LoginMode, Constants.T
 
     public static String getDeviceId(Context context) {
         return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+    }
+
+
+
+    public static String getAgeAndGender(String dob, String gender) {
+        ArrayList<String> list = new ArrayList<>();
+
+        if (TextUtils.isNotEmpty(dob))
+            list.add("Age " + getAge(dob));
+
+        if (TextUtils.isNotEmpty(gender))
+            switch (gender) {
+                case Constants.Gender.M: {
+                    list.add(MALE);
+                    break;
+                }
+                case Constants.Gender.F: {
+                    list.add(FEMALE);
+                    break;
+                }
+            }
+        return getCombinedStringList(list, Constants.Global.DOT, true);
+    }
+
+    public static int getAge(String sDOB) {
+        if (TextUtils.isNotEmpty(sDOB)) {
+            SimpleDateFormat sdf = new SimpleDateFormat(DATE_DOB);
+            try {
+                Calendar today = Calendar.getInstance();
+                Calendar dob = Calendar.getInstance();
+                dob.setTime(sdf.parse(sDOB));
+
+                int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+                if (today.get(Calendar.DAY_OF_MONTH) < dob.get(Calendar.DAY_OF_MONTH)) {
+                    age--;
+                }
+                return age;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return 0;
     }
 }

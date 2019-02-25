@@ -55,6 +55,9 @@ allprojects {
         MULTI_PICKER_LIB_VERSION = "1.1.31@aar"
         LOADER_VERSION = "2.1.3"
         PLAY_SERVICES_VERSION = "16.0.0"
+
+        FIREBASE_CORE = "16.0.7"
+        FIREBASE_MESSAGING = "17.3.4"
     }
 }
 

@@ -128,5 +128,11 @@ dependencies {
     implementation "com.google.android.gms:play-services-places:$PLAY_SERVICES_VERSION"
 
     //constraint layout
-    implementation "com.android.support.constraint:constraint-layout:$CONSTRAINT_LAYOUT_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-core:$FIREBASE_CORE"
+    implementation "com.google.firebase:firebase-messaging:$FIREBASE_MESSAGING"
 }
+//Change google-services file according to respective firebase project.
+apply plugin: 'com.google.gms.google-services'
